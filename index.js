@@ -17,6 +17,6 @@ btn.addEventListener('click',()=>{
 
 /* Color Of rgb value */
 btn2.addEventListener('click',()=>{
-select2.style.backgroundColor = `rgb(${Math.floor(25*Math.random(0,1))},${Math.floor(255*Math.random(0,1))},${Math.floor(255*Math.random(0,1))})`
-btn2.textContent = `rgb(${Math.floor(25*Math.random())},${Math.floor(250*Math.random())},${Math.floor(255*Math.random())})`
+select2.style.backgroundColor = `rgb(${Math.floor(255*Math.random(0,1))},${Math.floor(255*Math.random(0,1))},${Math.floor(255*Math.random(0,1))})`
+btn2.textContent = `rgb(${Math.floor(255*Math.random())},${Math.floor(250*Math.random())},${Math.floor(255*Math.random())})`
 })
