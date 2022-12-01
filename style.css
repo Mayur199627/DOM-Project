@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#changeButton{
+    position:absolute;
+    top: 25%;
+    left: 45vw;
+    padding: 10px;
+    font-weight: 700;
+    color: white;    
+    background-color: blue;
+    border: none;
+    border-radius: 5px
+}
+#changeButton1{
+    position:absolute;
+    top: 75%;
+    left: 45vw;
+    padding: 10px;
+    font-weight: 700;
+    color: white;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+}
+#firstHalf{
+    height: 50vh;
+    width: 100%;
+}
+
+#secondHalf{
+    height: 50vh;
+    width: 100%;
+}
