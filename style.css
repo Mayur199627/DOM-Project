@@ -1,58 +1,52 @@
-*{
+body{
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-#changeButton{
-    position:absolute;
-    top: 20%;
-    left: 45vw;
-    padding: 10px;
-    font-weight: 700;
-    color: white;    
-    background-color: blue;
-    border: none;
-    border-radius: 5px
-}
-#changeButton1{
-    position:absolute;
-    top: 75%;
-    left: 20vw;
-    padding: 10px;
-    font-weight: 700;
-    color: white;
-    background-color: blue;
-    border: none;
-    border-radius: 5px;
-}
-#changeButton2{
-    position:absolute;
-    top: 50%;
-    left: 20vw;
-    padding: 10px;
-    font-weight: 700;
-    color: white;
-    background-color: blue;
-    border: none;
-    border-radius: 5px;
-}
-#firstHalf{
-    height: 50vh;
-    width: 100%;
-    background-color: aliceblue;
+    background-color: wheat;
+    position: relative;
 }
 
-#secondHalf{
-    height: 50vh;
-    width: 50vw;
-    background-color: bisque;
+main{
+position: absolute;
+top: 10vh;
+left: 40vw;
+height: 75vh;
+min-width: 22vw;
+box-shadow: 1px 1px 2px 2px;
 }
-#thirdHalf{
+
+#display{
     position: absolute;
-    top: 50vh;
-    left: 50vw;
-    height: 50vh;
-    width: 50%;
-    background-color:cadetblue;
- 
+    top: 1vh;
+    left: 1vw;
+    min-height: 10vh;
+    width: 20vw;
+    box-shadow: 1px 1px 2px 2px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    font-size: x-large;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+#buttonContainer{
+position: absolute;
+box-shadow: 1px 1px 2px 2px;
+top: 12vh;
+left: 1vw;
+height: 62vh;
+
+width: 20vw;
+box-sizing: border-box;
+padding: 15px;
+
+}
+
+#buttonContainer > button{
+    height: 50px;
+    width: 70px;
+    margin: 8px;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    border: none;
+    border-radius: 10px;
+    font-weight: 900;
 }

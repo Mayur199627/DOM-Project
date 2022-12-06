@@ -1,36 +1,102 @@
-const select = document.getElementById('firstHalf');
-const btn = document.getElementById('changeButton');
-const select2 = document.getElementById('secondHalf');
-const btn2 = document.getElementById('changeButton1');
-const select3 = document.getElementById('thirdHalf');
-const btn3 = document.getElementById('changeButton2');
+const display = document.querySelector('#display')
+const btn = document.querySelector('#buttonContainer');
+const allClear = document.querySelector('[data-allClear]')
+const number = document.querySelectorAll('.numDisplay')
+const clear = document.querySelector('[data-clear]')
+const equal = document.querySelector('[data-equal]')
 
-/* Direct Color From Array */
-const color = ['red','yellow','pink','gray','aqua','lime','orange','brown','black','green'];
-let clr = 0;
-btn.addEventListener('click',()=>{
-    if(clr==color.length){
-        clr = 0;
-    }
-    select.style.backgroundColor = `${color[clr]}`;
-    btn.textContent = `${color[clr]}`
-    clr++;
+display.textContent = ""
+let prevNum;
+let operator;
+let previous;
+let currNum;
+
+
+// function for Computation //
+function compute(){
+if(operator == "+"){
+  let output = Number(prevNum) + Number(currNum)
+  display.textContent = `${output}`;
+}
+else if(operator == "-"){
+    let output = Number(prevNum) - Number(currNum)
+    display.textContent = `${output}`;
+  }
+ else if(operator == "*"){
+    let output = Number(prevNum) * Number(currNum)
+    display.textContent = `${output}`;
+  }
+  if(operator == "/"){
+    let output = Number(prevNum) / Number(currNum)
+    display.textContent = `${output}`;
+    prevNum = `${output}`;
+  }
+}
+
+
+// Event Listners //
+
+number.forEach((e)=>{
+    e.addEventListener('click', ()=>{
+        e.style.backgroundColor = "yellow"
+        setTimeout(()=> {e.style.backgroundColor = ""},100)
+        
+        let value = e.innerText;
+        
+        if(value >= 0 && value <= 9){
+            display.textContent += value;
+        }
+        else if(value == "+" && display.textContent == "" || value == "-" && display.textContent == "" || value == "*" && display.textContent == "" || value == "/" && display.textContent == "" || value == "." && display.textContent == ""){
+            display.textContent = "";
+        }
+        else{
+            if(value == "+" && operator == undefined || value == "-" && operator == undefined || value == "*" && operator == undefined || value == "/" && operator == undefined){
+                prevNum = display.innerText
+                operator = value;
+                previous = prevNum + operator;
+                display.textContent += value;
+            }
+            else if(value = "."){
+                display.textContent += value;
+            }
+            else{
+                value = ""
+            }
+
+        }
+    })
 })
 
-/* Color Of rgb value */
-btn2.addEventListener('click',()=>{
-select2.style.backgroundColor = `rgb(${Math.floor(255*Math.random(0,1))},${Math.floor(255*Math.random(0,1))},${Math.floor(255*Math.random(0,1))})`
-btn2.textContent = `rgb(${Math.floor(255*Math.random())},${Math.floor(250*Math.random())},${Math.floor(255*Math.random())})`
+clear.addEventListener('mousedown',()=>{
+    clear.style.backgroundColor = 'lime'
+    display.textContent = display.textContent.slice(0,-1)
+    
 })
 
-/* Color of HEX value */
-btn3.addEventListener('click',()=>{
-    let colorHex ="#";
-    let value = [0,1,2,3,4,5,6,7,8,9,"A","B","C","D","E","F"];
-    for(let i = 0; i<6; i++){
-        let index = Math.floor(Math.random()*value.length)
-        colorHex+=value[index]
-    }
-    select3.style.backgroundColor = colorHex;
-    btn3.textContent = colorHex;
+clear.addEventListener('mouseup',()=>{
+    clear.style.backgroundColor = 'white'
+})
+
+allClear.addEventListener('mousedown',()=>{
+    allClear.style.backgroundColor = 'red'
+    display.innerHTML = "";
+    prevNum = "";
+    operator = undefined;
+    previous = "";
+    currNum = "";
+
+})
+
+allClear.addEventListener('mouseup',()=>{
+    allClear.style.backgroundColor = 'white'
+})
+equal.addEventListener('mousedown',()=>{
+    equal.style.backgroundColor = 'green'
+    currNum = display.innerText.replace(previous,"")
+    compute();
+    operator = undefined;
+})
+
+equal.addEventListener('mouseup',()=>{
+    equal.style.backgroundColor = 'white'
 })
