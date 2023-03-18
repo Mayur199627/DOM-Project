@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_v6iyS-s8j-xwqElsWDQ-TXJutmDRkWJ-irhCgROcGQ&usqp=CAU&ec=48600112" alt="logo" height="50" width="50"><h1><span style="color: red;">My</span> <span style="color: blue;">Task</span>  <span style="color: lime;">Reminder</span></h1></div>
+        <div class="priority-btn">
+            <button class="All">All</button>
+            <button class="high">High</button>
+            <button class="moderate">Moderate</button>
+            <button class="low">Low</button>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search Your Task" class="search-box-text">
+            <button class="search-btn">Search</button>
+        </div>
+    </header>
+    <main>
+        <div class="add-task-cont">
+            <form >
+                <input type="text" placeholder="Add Your Task" class="task-input-box">
+                <select name="priority" id="priority">
+                    <option value="">Select Priority</option>
+                    <option value="High" id="High">High</option>
+                    <option value="Moderate" id="Moderate">Moderate</option>
+                    <option value="Low" id="Low">Low</option>
+                </select>
+                <button type="submit" class="add-task-btn">Add Task</button>
+            </form>
+        </div>
+        <div class="task-list">
+            <table class="all-task">
+                <tr>
+                    <th>Task</th>
+                    <th>Priority</th>
+                    <th>Action</th>
+                </tr>
+                <!-- <tr id="High">
+                    <td>Task</td>
+                    <td>Priority</td>
+                <td><button class="delete-btn">Delete</button></td>
+                </tr> -->
+            </table>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>

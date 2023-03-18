@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dancing+Script&family=Leckerli+One&family=Mulish:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dancing+Script&family=Leckerli+One&family=Mulish:wght@300&family=Permanent+Marker&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    height: 10vh;
+    width: 100%;
+    padding: 0 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Alex Brush', cursive;
+}
+
+.priority-btn button{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.All{
+    color: white;
+    background-color: #8e44ad;
+    font-family: 'Leckerli One', cursive;
+}
+
+.high{
+    color: white;
+    background-color: #e74c3c;
+    font-family: 'Leckerli One', cursive;
+}
+
+.moderate{
+    color: white;
+    background-color: #4834d4;
+    font-family: 'Leckerli One', cursive;
+}
+
+.low{
+    color: white;
+    background-color: #f1c40f;
+    font-family: 'Leckerli One', cursive;
+}
+.search-box input{
+    padding: 10px;
+    border-radius: 5x;
+    font-size: 20px;
+}
+.search-btn{
+    padding: 10px;
+    border: none;
+    color: white;
+    background-color: #341f97;
+    font-family: 'Leckerli One', cursive;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+main{
+    height: 80vh;
+    width: 100%;
+}
+
+.add-task-cont{
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* background-color: #10ac84; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, #10ac84 0px 18px 36px -18px inset;
+}
+
+#priority, .task-input-box, .add-task-btn{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.task-input-box{
+    width: 40vw;
+}
+
+.add-task-btn{
+    border: none;
+    background-color: #009432;
+    color: white;
+}
+
+table,th,td,tr{
+    padding: 10px;
+    border: thin solid white;
+    border-collapse: collapse;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.task-list{
+    display: flex;
+    justify-content: center;
+    /* margin-top: 10px; */
+}
+
+#High{
+    background-color: #e74c3c;
+    color: white;
+    font-size: 20px;
+}
+
+#Moderate{
+    background-color: #4834d4;
+    font-size: 20px;
+    color: white;
+}
+
+#Low{
+    background-color:#f1c40f;
+    color: white;
+    font-size: 20px;
+}
+
+.delete-btn{
+    cursor: pointer;
+    border: none;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+}
+
+th{
+    /* background-color: lime; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, #182C61 0px 18px 36px -18px inset;    width: 33.33vw;
+    color: #182C61;
+    font-size: 20px;
+}
